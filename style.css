@@ -1,0 +1,100 @@
+body {
+  font-family: 'Roboto', sans-serif; /* Modern font */
+  margin: 0;
+  background: #f4f7f6; /* Light grey background */
+  color: #333;
+  scroll-behavior: smooth;
+}
+section {
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 30px auto; /* Center sections with more margin */
+  max-width: 960px; /* Max width for content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  animation: fadeIn 1.5s ease;
+}
+#hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('new_background.svg') no-repeat center center/cover; /* Dark overlay for text readability */
+  color: white;
+  padding: 180px 20px;
+  position: relative;
+}
+#hero .overlay {
+  background-color: rgba(0, 0, 0, 0.4); /* Slightly darker overlay */
+  padding: 50px;
+  border-radius: 10px;
+}
+h1 span {
+  color: #66cc99; /* Soft green */
+}
+h2 {
+  color: #333; /* Darker for professionalism */
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+.skill {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+.bar {
+  width: 100%;
+  background: #e0e0e0; /* Lighter grey for bar background */
+  border-radius: 5px;
+  margin-bottom: 20px;
+  height: 15px; /* Thinner bar */
+}
+.fill {
+  height: 15px; /* Match bar height */
+  border-radius: 5px;
+  background-color: #66cc99; /* Soft green */
+  animation: fillAnim 2s ease-in-out;
+  position: relative;
+}
+.fill::after {
+  content: attr(data-progress) '%';
+  position: absolute;
+  right: 5px; /* Adjust position */
+  color: #333; /* Darker text for contrast */
+  font-size: 0.7em;
+  line-height: 15px; /* Match bar height */
+}
+
+#services {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+#services h3 {
+  margin-top: 30px;
+  color: #4CAF50; /* A nice green for subheadings */
+  font-size: 1.8em;
+}
+
+#services p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.service-logo {
+  margin: 20px auto;
+  text-align: center;
+}
+
+footer {
+  background: #333; /* Dark grey for footer */
+  color: white;
+  padding: 30px;
+  border-radius: 0 0 10px 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fillAnim {
+  from { width: 0; }
+  to { width: 100%; }
+}
